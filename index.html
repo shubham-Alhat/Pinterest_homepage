@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest Clone2</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<!-- the overflow-hidden property will remove browser's default scrollbars -->
+<body class="h-screen w-screen bg-white overflow-hidden">
+    <!-- big container -->
+    <div id="big_container" class="grid grid-cols-[80px_1fr]">
+
+        <!-- side bar -->
+        <span id="side_bar" class=" h-screen border-r border-gray-300 bg-white">
+            <div class="w-full flex flex-col items-center justify-evenly text-xl mt-6">
+                <a href="" class="mb-10 text-red-500 text-2xl"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="" class="mb-10"><i class="fa-solid fa-house"></i></a>
+                <a href="" class="mb-10"><i class="fa-solid fa-compass"></i></a>
+                <a href="" class="mb-10"><i class="fa-solid fa-square-plus"></i></a>
+                <a href="" class="mb-10"><i class="fa-solid fa-bell"></i></a>
+                <a href="" class="mb-10"><i class="fa-solid fa-comment-dots"></i></a>
+            </div>
+
+            <div class="w-full flex justify-center items-center text-xl mt-52">
+                <a href=""><i class="fa-solid fa-gear"></i></a>
+            </div>
+        </span>
+
+        <!-- container with search bar -->
+        <div id="container2" class="grid grid-rows-[60px_1fr]">
+            <!-- search bar -->
+            <div id="search_bar" class=" px-5 py-2 flex items-center">
+                <div class="bg-slate-100 text-[16px] py-2 text-gray-400 pl-2 rounded-tl-lg rounded-bl-lg">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <form action="#" class="flex-grow">
+                    <input type="search" placeholder="Search" class="bg-slate-100 h-full w-full text-[18px] py-2 px-3 outline-none rounded-tr-lg rounded-br-lg">
+                </form>
+                <div class="w-[34px] h-[34px] text-white bg-gray-500 ml-3 rounded-[17px] flex justify-center items-center font-bold">
+                    A
+                </div>
+                
+            </div>
+
+            <!-- image Container -->
+             <!-- here if we want to trigger scrollbar to div at certain height. 
+              but here see grid now this div has infinite height because 1fr column (line no 30 , id=conatiner2)
+              so we have apply h-screen so that it take only screen not 1fr  -->
+
+            <div class="grid max-h-screen grid-cols-2 pr-3 pl-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 overflow-auto overflow-y-scroll">
+
+                <!-- 1st column for mobile -->
+                <div class="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/ec/3c/46/ec3c4645bfb65f4cbc1baf8064ec24fc.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/564x/bf/13/92/bf1392d3cb8fbc934350431784ac24d3.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/3d/dd/bb/3dddbb3135316d603af9348df605e0ee.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/564x/59/7d/9b/597d9b66b2f8e26dcf34a2fbedcfecfb.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/cf/4b/ce/cf4bce16d655941eaab5adce117276d4.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/4c/19/92/4c19926af39f1b5a1235dbd3ca630be9.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/736x/3c/7a/6e/3c7a6e88dcbbe5ad1423fa3d26e20505.jpg" alt="">
+                </div>
+    
+                <!-- 2nd column for mobile-->
+                <div class="ml-4 mr-4">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/8a/33/2f/8a332f70d9b81e827005be00ae59d819.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/564x/4e/b7/76/4eb776ec9fc0739958b784fe30e4056c.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/564x/37/4e/2b/374e2ba7ab16b7fb358d61766ca51762.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/89/f9/58/89f9586d44aeb734e2634915eaea6e73.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/85/2d/70/852d70c1493580467972f7a42346f515.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/736x/30/ce/ae/30ceae940f14d2676eda9ff417f59435.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/00/81/25/008125c77c37f533df5f3e9ba0734799.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/564x/87/da/0d/87da0dc1914429ce98d8c27007cffa5a.jpg" alt="">
+                </div>
+    
+                <!-- 3rd column which will appear when screen = sm or greater -->
+                <div class="hidden mr-4 md:block">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/2f/de/a7/2fdea74d47e6f76ef7f140284fb38ebc.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/736x/ef/94/5b/ef945b3d58ebb535fddf5078c78f40fd.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/3b/53/48/3b5348481d3358be950b2e8275951ece.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/736x/f2/66/3f/f2663fe43478b0b37f02abbc7c39acee.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/2f/de/a7/2fdea74d47e6f76ef7f140284fb38ebc.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/b9/eb/9b/b9eb9b69c2ea12e55cd7db5c30f10685.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/564x/d2/e2/0f/d2e20f3d263c9dc3d3d076475eca3707.jpg" alt="">
+                </div>
+    
+                <!-- 4rth column which will appear when screen will be md or greater -->
+                <div class="hidden mr-4 lg:block">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/7d/6b/35/7d6b356ad5b5e1cd6b41a0835026b962.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/d3/1e/d9/d31ed955efd15eacdbb71515c4cc3a5e.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/26/2d/d7/262dd7f8adda6ad275419fd7df0e9ae3.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/564x/77/7c/e3/777ce3740bd2589b55187fb15225a3a2.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/7d/6b/35/7d6b356ad5b5e1cd6b41a0835026b962.jpg" alt="image">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/5a/f4/43/5af443207f83588e27489d2e44d03fba.jpg" alt="image">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/fc/44/82/fc4482a1e6148c359655adfe5bf4dfe8.jpg" alt="image">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/35/50/88/355088e2be56b8836e60689db0283f49.jpg" alt="image">
+                </div>
+    
+                <!-- 5th column which will appear after   -->
+                <div class="hidden xl:block mr-4">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/05/93/2e/05932e62c6e2d276d511d834998c3f55.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/1e/76/8d/1e768d1dfccea36c16f1afaf4b8a3dfc.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/4d/79/e1/4d79e121c176caefd0258aed237aedd3.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/564x/b9/ff/df/b9ffdf9bd628473df80c60b01fa98e27.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/d0/fe/c0/d0fec054e134ea4f2ea85fb74c473b9d.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/f6/fa/73/f6fa735633a3799b1141db83712d341d.jpg" alt="">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/7d/6b/35/7d6b356ad5b5e1cd6b41a0835026b962.jpg" alt="image">
+                    <img class="h-auto w-full my-6 rounded-2xl" src="https://i.pinimg.com/enabled_hi/564x/72/d4/9f/72d49f2188c136512e3648263d24ef66.jpg" alt="image">
+                </div>
+            </div>
+
+         </div>                      
+         <!-- conatiner 2 ends -->
+
+
+    </div>
+
+
+</body>
+</html>
